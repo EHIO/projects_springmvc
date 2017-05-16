@@ -1,2 +1,5 @@
 # project_springmvc
-springmvc相关工程
+springmvc_helloworld springmvc入门例子
+springmvc_mybatis springmvc和mybatis整合例子
+
+

@@ -2,9 +2,9 @@ package cn.wg.ssm.mapper;
 
 import cn.wg.ssm.po.Orders;
 import cn.wg.ssm.po.OrdersExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
 public interface OrdersMapper {
     int countByExample(OrdersExample example);

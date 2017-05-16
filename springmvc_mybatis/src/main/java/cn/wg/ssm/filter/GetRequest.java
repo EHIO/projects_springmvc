@@ -11,6 +11,7 @@ import java.io.UnsupportedEncodingException;
  */
 public class GetRequest extends HttpServletRequestWrapper {
     HttpServletRequest request;
+
     /**
      * Constructs a request object wrapping the given request.
      *
@@ -27,7 +28,7 @@ public class GetRequest extends HttpServletRequestWrapper {
         name = super.getParameter(name);
         if (name != null) {
             try {
-                name = new String(name.getBytes("iso-8859-1"),"utf-8");
+                name = new String(name.getBytes("iso-8859-1"), "utf-8");
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }

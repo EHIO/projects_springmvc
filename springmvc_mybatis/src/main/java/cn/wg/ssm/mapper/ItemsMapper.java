@@ -37,26 +37,24 @@ public interface ItemsMapper {
 
     int updateByPrimaryKey(Items record);
 
-	/**
-	 * @param itemsCustom
-	 * @author wg
-	 * @date 2016-5-23上午2:46:18
-	 */
-	void batchUpdateByPrimaryKeyWithBLOBsByReplaceInto(List<ItemsCustom> list);
-	
-	/**
-	 * 
-	 * @param list
-	 * @author wg
-	 * @date 2016-5-23上午3:08:12
-	 */
-	void batchUpdateByPrimaryKeyWithBLOBsByInsertInto(List<ItemsCustom> list);
-	
-	/**
-	 * 
-	 * @param list
-	 * @author wg
-	 * @date 2016-5-23上午3:08:12
-	 */
-	void batchUpdateByCaseWhen(List<ItemsCustom> list);
+    /**
+     * @param itemsCustom
+     * @author wg
+     * @date 2016-5-23上午2:46:18
+     */
+    void batchUpdateByPrimaryKeyWithBLOBsByReplaceInto(List<ItemsCustom> list);
+
+    /**
+     * @param list
+     * @author wg
+     * @date 2016-5-23上午3:08:12
+     */
+    void batchUpdateByPrimaryKeyWithBLOBsByInsertInto(List<ItemsCustom> list);
+
+    /**
+     * @param list
+     * @author wg
+     * @date 2016-5-23上午3:08:12
+     */
+    void batchUpdateByCaseWhen(List<ItemsCustom> list);
 }

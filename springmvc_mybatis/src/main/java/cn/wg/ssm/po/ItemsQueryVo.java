@@ -3,51 +3,48 @@ package cn.wg.ssm.po;
 import java.util.List;
 
 /**
- * @author	传智.燕青
- * @date	2015-4-13下午3:22:36
- * @version 1.0
  */
 public class ItemsQueryVo {
-	
-	//商品信息
-	private Items items;
-	
-	//为了系统 可扩展性，对原始生成的po进行扩展
-	private ItemsCustom itemsCustom;
-	
-	//批量商品信息
-	private List<ItemsCustom> itemsList;
-	
-	//用户信息
-	//private UserCustom userCustom;
 
-	public Items getItems() {
-		return items;
-	}
+    //商品信息
+    private Items items;
 
-	public void setItems(Items items) {
-		this.items = items;
-	}
+    //为了系统 可扩展性，对原始生成的po进行扩展
+    private ItemsCustom itemsCustom;
 
-	public ItemsCustom getItemsCustom() {
-		return itemsCustom;
-	}
+    //批量商品信息
+    private List<ItemsCustom> itemsList;
 
-	public void setItemsCustom(ItemsCustom itemsCustom) {
-		this.itemsCustom = itemsCustom;
-	}
+    //用户信息
+    //private UserCustom userCustom;
 
-	public List<ItemsCustom> getItemsList() {
-		return itemsList;
-	}
+    public Items getItems() {
+        return items;
+    }
 
-	public void setItemsList(List<ItemsCustom> itemsList) {
-		this.itemsList = itemsList;
-	}
+    public void setItems(Items items) {
+        this.items = items;
+    }
 
-	@Override
-	public String toString() {
-		return "ItemsQueryVo [items=" + items + ", itemsCustom=" + itemsCustom
-				+ ", itemsList=" + itemsList + "]";
-	}
+    public ItemsCustom getItemsCustom() {
+        return itemsCustom;
+    }
+
+    public void setItemsCustom(ItemsCustom itemsCustom) {
+        this.itemsCustom = itemsCustom;
+    }
+
+    public List<ItemsCustom> getItemsList() {
+        return itemsList;
+    }
+
+    public void setItemsList(List<ItemsCustom> itemsList) {
+        this.itemsList = itemsList;
+    }
+
+    @Override
+    public String toString() {
+        return "ItemsQueryVo [items=" + items + ", itemsCustom=" + itemsCustom
+                + ", itemsList=" + itemsList + "]";
+    }
 }

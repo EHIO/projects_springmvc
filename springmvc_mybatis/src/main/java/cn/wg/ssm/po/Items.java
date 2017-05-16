@@ -1,12 +1,11 @@
 package cn.wg.ssm.po;
 
-import java.util.Date;
+import cn.wg.ssm.controller.validation.ValidGroup1;
+import cn.wg.ssm.controller.validation.ValidGroup2;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
-import cn.wg.ssm.controller.validation.ValidGroup1;
-import cn.wg.ssm.controller.validation.ValidGroup2;
+import java.util.Date;
 
 public class Items {
     private Integer id;
@@ -14,7 +13,7 @@ public class Items {
     //校验名称在1到30字符中间
     //message是提示校验出错显示的信息
     //groups：此校验属于哪个分组，groups可以定义多个分组
-    @Size(min=1,max=30,message="{items.name.length.error}",groups={ValidGroup1.class})
+    @Size(min = 1, max = 30, message = "{items.name.length.error}", groups = {ValidGroup1.class})
     private String name;
 
     private Float price;
@@ -22,7 +21,7 @@ public class Items {
     private String pic;
 
     //非空校验
-    @NotNull(message="{items.createtime.isNUll}", groups={ValidGroup2.class})
+    @NotNull(message = "{items.createtime.isNUll}", groups = {ValidGroup2.class})
     private Date createtime;
 
     private String detail;
@@ -75,10 +74,10 @@ public class Items {
         this.detail = detail == null ? null : detail.trim();
     }
 
-	@Override
-	public String toString() {
-		return "Items [id=" + id + ", name=" + name + ", price=" + price
-				+ ", pic=" + pic + ", createtime=" + createtime + ", detail="
-				+ detail + "]";
-	}
+    @Override
+    public String toString() {
+        return "Items [id=" + id + ", name=" + name + ", price=" + price
+                + ", pic=" + pic + ", createtime=" + createtime + ", detail="
+                + detail + "]";
+    }
 }

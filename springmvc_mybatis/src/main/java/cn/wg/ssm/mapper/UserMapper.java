@@ -2,9 +2,9 @@ package cn.wg.ssm.mapper;
 
 import cn.wg.ssm.po.User;
 import cn.wg.ssm.po.UserExample;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
     int countByExample(UserExample example);
