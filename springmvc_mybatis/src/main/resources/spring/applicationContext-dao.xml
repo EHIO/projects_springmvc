@@ -17,8 +17,7 @@
     <context:property-placeholder location="classpath:db.properties"/>
     <!-- 配置数据源 ，dbcp -->
 
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-          destroy-method="close">
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driver}"/>
         <property name="url" value="${jdbc.url}"/>
         <property name="username" value="${jdbc.username}"/>
@@ -36,7 +35,7 @@
     <!-- mapper扫描器 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 扫描包路径，如果需要扫描多个包，中间使用半角逗号隔开, 支持嵌套扫描 -->
-        <property name="basePackage" value="cn.wg.ssm.mapper"></property>
+        <property name="basePackage" value="org.wg.ssm.mapper"></property>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
