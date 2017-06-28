@@ -63,7 +63,6 @@ public class ItemsServiceImpl implements ItemsService {
         //updateByPrimaryKeyWithBLOBs要求必须转入id
 
         itemsMapper.updateByPrimaryKeyWithBLOBs(itemsCustom);
-        int i = 1/ 0;
     }
 
     /* (non-Javadoc)
