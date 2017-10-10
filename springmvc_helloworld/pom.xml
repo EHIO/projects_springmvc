@@ -13,6 +13,7 @@
     <properties>
         <jetty.port>10001</jetty.port>
     </properties>
+
     <build>
         <finalName>springmvc_helloworld</finalName>
         <plugins>
@@ -136,11 +137,5 @@
             <artifactId>spring-webmvc</artifactId>
             <version>3.2.0.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-        </dependency>
-
     </dependencies>
 </project>
