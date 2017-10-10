@@ -1,12 +1,17 @@
 package org.wg.springmvc.controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.wg.springmvc.po.Items;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  */
@@ -88,4 +93,12 @@ public class ItemsController3 {
     // return modelAndView;
     // }
 
+
+    @RequestMapping(value = "/test", method = RequestMethod.POST/*, produces = { "text/html;charset=UTF-8" }*/)
+    @ResponseBody
+    public void test(String username, HttpServletResponse response) throws IOException {
+        System.out.println(username);
+        response.getWriter().print(username);
+//        return username;
+    }
 }
