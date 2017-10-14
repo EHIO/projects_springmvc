@@ -6,7 +6,7 @@
     <display-name>springmvc_helloworld</display-name>
 
     <!--编码过虑器-->
-    <filter>
+    <!--<filter>
         <filter-name>encodingFilter</filter-name>
         <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
         <init-param>
@@ -21,7 +21,16 @@
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
+    </filter-mapping>-->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.wg.springmvc.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
+
     <!-- springmvc前端控制器 -->
     <servlet>
         <servlet-name>springmvc</servlet-name>

@@ -20,31 +20,16 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     -->
 
-    <script type="text/javascript" src="${pageContext.request.contextPath}/asset/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.10.2.js"></script>
 </head>
 
 <body>
-This is my JSP page. <br>
-
+This is my JSP page.
+<hr>
 
 <form action="${pageContext.request.contextPath}/test.action" method="post">
     <input type="text" name="username" value="中国">
     <input type="submit" value="提交">
 </form>
 </body>
-
-<script>
-    /*$.ajax({
-        type:'post',
-        dataType:'json',
-        url: "/springmvc_helloworld/test.action",
-        data:{username:"中国"},
-        async : false,
-        success: function (d) {
-            debugger;
-            //根据后台返回结果判定是否有访问权限，提示web前端信息
-            alert(d);
-        }
-    });*/
-</script>
 </html>
