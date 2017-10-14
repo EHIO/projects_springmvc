@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.wg.springmvc.po.Items;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * <p>Title: JsonTest</p>
  * <p>Description: json交互测试</p>
@@ -18,7 +20,7 @@ public class JsonTestController {
     //@ResponseBody将items转成json输出
     @RequestMapping("/requestJson")
     @ResponseBody
-    public Items requestJson(@RequestBody Items items) {
+    public Items requestJson(@RequestBody Items items, String name) {
         System.err.println(items);
         //@ResponseBody将items转成json输出
         return items;
@@ -27,8 +29,9 @@ public class JsonTestController {
     //请求key/value，输出json
     @RequestMapping("/responseJson")
     @ResponseBody
-    public Items responseJson(Items items) {
+    public Items responseJson(Items items, String name, HttpServletRequest request) {
         System.err.println(items);
+        System.out.println(request.getParameter("name"));
         //@ResponseBody将items转成json输出
         return items;
     }
