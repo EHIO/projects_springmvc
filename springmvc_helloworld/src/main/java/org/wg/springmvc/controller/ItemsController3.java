@@ -96,9 +96,11 @@ public class ItemsController3 {
 
     @RequestMapping(value = "/test", method = RequestMethod.POST/*, produces = { "text/html;charset=UTF-8" }*/)
     @ResponseBody
-    public void test(String username, HttpServletResponse response) throws IOException {
+    public String test(String username, HttpServletResponse response) throws IOException {
         System.out.println(username);
-        response.getWriter().print(username);
-//        return username;
+//        response.setContentType("text/html; charset=utf-8");
+//        response.setCharacterEncoding("utf-8");
+//        response.getWriter().println(username);
+        return username;
     }
 }

@@ -32,6 +32,8 @@
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:springmvc.xml</param-value>
         </init-param>
+        <!-- 在 Web 应用启动时立即加载 Servlet -->
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
