@@ -31,5 +31,10 @@ This is my JSP page.
     <input type="text" name="username" value="中国">
     <input type="submit" value="提交">
 </form>
+
+<hr>
+
+<a href="${pageContext.request.contextPath}/jsonTest.jsp">jsonTest</a>
+
 </body>
 </html>

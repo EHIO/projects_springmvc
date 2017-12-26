@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
  * <p>Description: json交互测试</p>
  */
 @Controller
+@RequestMapping("jsonTest")
 public class JsonTestController {
 
     //请求json串(商品信息)，输出json(商品信息)
@@ -36,4 +37,11 @@ public class JsonTestController {
         return items;
     }
 
+
+    @RequestMapping("/test")
+    @ResponseBody
+    public String test(String name, String price) {
+        System.out.println("name=" + name + ", price=" + price);
+        return "哈哈";
+    }
 }
