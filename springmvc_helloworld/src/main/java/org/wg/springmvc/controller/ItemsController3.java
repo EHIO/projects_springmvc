@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.wg.springmvc.po.Items;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
@@ -96,11 +97,22 @@ public class ItemsController3 {
 
     @RequestMapping(value = "/test", method = RequestMethod.POST/*, produces = { "text/html;charset=UTF-8" }*/)
     @ResponseBody
-    public String test(String username, HttpServletResponse response) throws IOException {
+    public String test(String username, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        System.out.println(request.getCharacterEncoding());
         System.out.println(username);
+        System.err.println("request:" + request.getParameter("username"));
 //        response.setContentType("text/html; charset=utf-8");
 //        response.setCharacterEncoding("utf-8");
 //        response.getWriter().println(username);
         return username;
+    }
+
+    @RequestMapping(value = "/test2", method = RequestMethod.POST/*, produces = { "text/html;charset=UTF-8" }*/)
+    public void test2(String username, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        System.out.println(request.getCharacterEncoding());
+//        response.setContentType("text/html; charset=utf-8");
+//        response.setCharacterEncoding("utf-8");
+//        response.getWriter().println(username);
+        response.getWriter().print(username);
     }
 }
